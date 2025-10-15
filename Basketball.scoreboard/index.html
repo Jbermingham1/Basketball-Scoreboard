@@ -1,0 +1,82 @@
+<html>
+  <head>
+    <link href="https://fonts.cdnfonts.com/css/cursed-timer-ulil" rel="stylesheet">
+    <link rel="stylesheet" href="index.css">
+  </head>
+  <body>
+    <div class="scoreboard">
+      <div class="container">
+
+        <!-- 1) HOME column (left) -->
+        <section class="column" aria-labelledby="home-title">
+          <div class="home-score">
+            <h3 id="home-title" class="home-title">HOME</h3>
+            <h3 id="score-home-el">0</h3>
+          </div>
+
+          <!-- foul counter -->
+          <div class="foul-row">
+            <div class="foul-box" id="home-fouls" aria-label="home fouls">0</div>
+          </div>
+
+          <!-- +1/+2/+3 -->
+          <div class="controls">
+            <button id="home-free-throw" onclick="homeFreeThrow()">+1</button>
+            <button id="home-mid-range" onclick="homeMidRange()">+2</button>
+            <button id="home-long-three" onclick="homeLongThree()">+3</button>
+          </div>
+
+          <!-- Cause Foul -->
+          <div class="controls-wide">
+            <button id="home-foul-btn">Cause Foul</button>
+          </div>
+        </section>
+
+        <!-- 2) MIDDLE column (center) -->
+        <section class="mid" aria-label="timer and period">
+          <div class="timer-block">
+            <p class="label">TIMER</p>
+            <div id="clock" class="clock" role="timer" aria-live="polite">40:00</div>
+          </div>
+
+          <div class="period-block">
+            <p class="label">PERIOD</p>
+            <div id="period-el" class="period">1</div>
+          </div>
+
+          <div class="controls-wide">
+            <button id="check-winner">Check Winner</button>
+            <button id="new-game">New Game</button>
+          </div>
+        </section>
+
+        <!-- 3) GUEST column (right) -->
+        <section class="column" aria-labelledby="guest-title">
+          <div class="home-score">
+            <h3 id="guest-title" class="guest-title">GUEST</h3>
+            <h3 id="score-guest-el">0</h3>
+          </div>
+
+          <!-- foul counter -->
+          <div class="foul-row">
+            <div class="foul-box" id="guest-fouls" aria-label="guest fouls">0</div>
+          </div>
+
+          <!-- +1/+2/+3 -->
+          <div class="controls">
+            <button id="guest-free-throw" onclick="guestFreeThrow()">+1</button>
+            <button id="guest-mid-range" onclick="guestMidRange()">+2</button>
+            <button id="guest-long-three" onclick="guestLongThree()">+3</button>
+          </div>
+
+          <!-- Cause Foul -->
+          <div class="controls-wide">
+            <button id="guest-foul-btn">Cause Foul</button>
+          </div>
+        </section>
+
+      </div>
+    </div>
+    <script src="index.js" defer></script>
+  </body>
+</html>
